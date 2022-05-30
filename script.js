@@ -9,41 +9,44 @@ function computerPlay() {
 function playRound( playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-    if (playerSelection === "Rock"){
-        if (computerSelection === "Rock") {
+
+    console.log(playerSelection, computerSelection);
+
+    if (playerSelection === "rock"){
+        if (computerSelection === "rock") {
             return "draw";
         }
-        if (computerSelection === "Paper") {
+        if (computerSelection === "paper") {
             return "computer";
         }
-        if (computerSelection === "Scissors") {
+        if (computerSelection === "scissors") {
             return "player";
         }
-    } else if (playerSelection === "Paper") {
-        if (computerSelection === "Rock") {
+    } else if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
             return "player";
         }
-        if (computerSelection === "Paper") {
+        if (computerSelection === "paper") {
             return "draw";
         }
-        if (computerSelection === "Scissors") {
+        if (computerSelection === "scissors") {
             return "computer";
         }
-    } else if (playerSelection === "Scissors") {
-        if (computerSelection === "Rock") {
+    } else if (playerSelection === "scissors") {
+        if (computerSelection === "rock") {
             return "computer";
         }
-        if (computerSelection === "Paper") {
+        if (computerSelection === "paper") {
             return "player";
         }
-        if (computerSelection === "Scissors") {
+        if (computerSelection === "scissors") {
             return "draw";
         }
     }
 }
 
 function game() {
-    let player, computer;
+    let player = 0, computer = 0;
 
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Please enter your choice: ");
@@ -58,6 +61,8 @@ function game() {
             computer += 1;
         }
     }
+
+    console.log(player, computer);
 
     if (player > computer) {
         console.log("The final winner is player!");

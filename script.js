@@ -41,3 +41,31 @@ function playRound( playerSelection, computerSelection) {
         }
     }
 }
+
+function game() {
+    let player, computer;
+
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Please enter your choice: ");
+        let computerSelection = computerPlay();
+        winner = playRound(playerSelection, computerSelection);
+
+        console.log(`Winner of Round ${i+1}: ${winner}`);
+
+        if (winner === "player") {
+            player += 1;
+        } else if (winner === "computer") {
+            computer += 1;
+        }
+    }
+
+    if (player > computer) {
+        console.log("The final winner is player!");
+    } else if(computer > player) {
+        console.log("The final winner is computer!");
+    } else {
+        console.log("It's a draw!")
+    }
+}
+
+game();

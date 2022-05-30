@@ -12,36 +12,20 @@ function playRound( playerSelection, computerSelection) {
 
     console.log(playerSelection, computerSelection);
 
-    if (playerSelection === "rock"){
-        if (computerSelection === "rock") {
-            return "draw";
-        }
-        if (computerSelection === "paper") {
-            return "computer";
-        }
-        if (computerSelection === "scissors") {
-            return "player";
-        }
-    } else if (playerSelection === "paper") {
-        if (computerSelection === "rock") {
-            return "player";
-        }
-        if (computerSelection === "paper") {
-            return "draw";
-        }
-        if (computerSelection === "scissors") {
-            return "computer";
-        }
-    } else if (playerSelection === "scissors") {
-        if (computerSelection === "rock") {
-            return "computer";
-        }
-        if (computerSelection === "paper") {
-            return "player";
-        }
-        if (computerSelection === "scissors") {
-            return "draw";
-        }
+    if (playerSelection === computerSelection) {
+        return "draw";
+    }else if (
+        ((playerSelection === "rock") && (computerSelection === "scissors")) ||
+        ((playerSelection === "paper") && (computerSelection === "rock")) ||
+        ((playerSelection === "scissors") && (computerSelection === "paper"))
+    ) {
+        return "player";
+    } else if (
+        ((playerSelection === "rock") && (computerSelection === "paper")) ||
+        ((playerSelection === "paper") && (computerSelection === "scissors")) ||
+        ((playerSelection === "scissors") && (computerSelection === "rock"))
+    ) {
+        return "computer";
     }
 }
 

@@ -1,0 +1,27 @@
+body {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    margin: 32px;
+    border-radius: 10px;
+}
+
+.tryAgainBtn {
+    border-radius: 6px;
+    margin: 32px;
+    width: 100px;
+    height: 25px;
+}
